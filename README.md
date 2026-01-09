@@ -1,13 +1,13 @@
-<h2>Extracting Metadata from Datasets in Dataverse Using a Python Script</h2>
+<h2>Harvesting the Metadata from Datasets in Dataverse Using a Python Script</h2>
 
-If you are using this on the same server, you could run this script directly.
+If you are using this script on the dataverse installed server where the python package are available, you could run it on the terminal.
 
-I have prepared this document to extract the metadata from datasets using Python 3.14 in Windows 11.
+I have prepared this document to extract metadata from datasets using Python 3.14 on Windows 11. We are using the OAI protocol to harvest the metadata.
 
 1.	Install Python 3.14 on a Windows system
 <a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a>
 
-2.	Add a path to the Python in Environmetal Variables
+2.	Add a path to Python in Environmental Variables
 
 Eg:- <br>
   D:\Python\
@@ -19,7 +19,7 @@ Open Command Prompt and run:
 <br>
 **python --version**
 
-Disable Microsoft Store Python Alias, If Windows keeps redirecting python to the Microsoft Store
+Disable Microsoft Store Python Alias, if Windows keeps redirecting Python to the Microsoft Store
 
 Open Settings
 
@@ -33,17 +33,19 @@ python.exe
 
 python3.exe
 
-4.Restart Command Prompt and test again: <br>
+4. Restart Command Prompt and test again: <br>
 
 **python --version**
 
-5.Install Required Python Package** <br>
+5. Install Required Python Package** <br>
       Now install the required library: <br>
       **pip install requests**
 
-6.Download and extract the zip file into a folder <br>
+6. Download and extract the zip file into a folder <br>
 
-7.Edit the base URL under the # configuration <br>
+7 . Edit the **base URL** under the heading # configuration <br>
+    Eg. <del>https://dataverse.harvard.edu</del>/oai </br>
+    Please don't remove the /oai from the Base URL.
     Save the file as **harvest_dataverse_oai_csv.py** <br>
     
 8.	Open the command prompt <br>
